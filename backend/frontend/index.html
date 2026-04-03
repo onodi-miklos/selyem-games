@@ -12,6 +12,8 @@
     </head>
     <body>
         <h1 id="cim">Selyem Games</h1>
+        <h2 class="alcim">202<span>6(7)</span> legnagyobbja:</h2>
+        <h2 class="alcim" id="up">a Selyem Studio által</h2>
         <button id="startBtn" onclick="start()">LET'S GO</button>
         <img id="credit" src="images/selyem-studio.png" alt="Selyem Studio" />
 
@@ -22,11 +24,30 @@
             <div id="buttonHolder">
                 <button onclick="hide()" id="closeBtn">X</button>
             </div>
-            <form method="post" action="">
+            <form method="post" action="./rooms.html">
                 <label for="nameField">Adj nevet magadnak:</label>
-                <input type="text" id="nameField" placeholder="név" maxlength="16">
+                <input required type="text" id="nameField" placeholder="név" maxlength="16">
+                <hr>
                 <h1>Szabd személyre a karaktered:</h1>
-                <div></div>
+                <div id="container">
+                    <button class="item" id="hajPrev"><</button>
+                    <div class="item"></div>
+                    <button class="item" id="hajNext">></button>
+
+                    <button class="item" id="arcPrev"><</button>
+                    <div class="item"></div>
+                    <button class="item" id="arcNext">></button>
+
+                    <button class="item" id="szinPrev"><</button>
+                    <div class="item"></div>
+                    <button class="item" id="szinNext">></button>
+
+                    <div class="item"></div>
+                    <div class="item" id="preview"></div>
+                    <div class="item"></div>
+                </div>
+
+                <input id="submitBtn" type="submit" value="Tovább">
             </form>
         </dialog>
     </body>

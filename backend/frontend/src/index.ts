@@ -1,3 +1,6 @@
+alert('A játék számítógépre van optimalizálva!')
+
+// dialog
 const dialog = document.getElementById("signup") as HTMLDialogElement | null;
 
 function start(): void {

@@ -6,6 +6,11 @@ body {
   background: linear-gradient(20deg, #727ce6, #dd99e6);
 }
 
+span {
+  font-weight: 1000;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: underline;
+}
 /* Cím */
 #cim {
   text-align: right;
@@ -14,6 +19,17 @@ body {
   font-size: clamp(2rem, 5vw, 4rem);
   color: #fafafa;
   z-index: 2;
+}
+.alcim {
+  text-align: right;
+  margin: 2rem;
+  font-family: Poppins, Verdana, Arial, sans-serif;
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  color: #dfdfdf;
+  z-index: 2;
+}
+#up {
+  transform: translateY(-50%);
 }
 
 /* Gomb */
@@ -65,7 +81,7 @@ body {
   top: 0;
   left: 0;
   transform-origin: center;
-  animation: 4s infinite linear rotateNegyzet;
+  animation: 5s infinite linear rotateNegyzet;
   z-index: -1;
 }
 
@@ -77,7 +93,7 @@ body {
   bottom: 0;
   right: 0;
   transform-origin: center;
-  animation: 9s infinite linear rotateKor;
+  animation: 14s infinite linear rotateKor;
   z-index: -1;
   background-image: url(images/kor.svg);
   background-repeat: no-repeat;
@@ -102,22 +118,18 @@ body {
     transform: translate(45%, 45%) rotate(0deg);
   }
 }
-/* .particles {
-  width: 1px;
-  height: 1px;
-  background: #fafafa;
-} */
 
+/* Dialog */
 #signup {
   z-index: 3;
-  width: 50vw;
-  height: 75vh;
+  width: 550px;
+  height: 90vh;
   border: 4px solid hsla(0, 0%, 98%, 50%);
   border-radius: 25px;
   position: fixed;
   top: 80%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-75%, -43%);
   background: #9797a0;
   font-family: Poppins, Verdana, Arial, sans-serif;
   color: #fafafa;
@@ -131,6 +143,8 @@ body {
 }
 #buttonHolder {
   text-align: right;
+  transform: translateY(-35px);
+  margin-bottom: 0
 }
 #closeBtn {
   border: none;
@@ -142,10 +156,12 @@ body {
   height: 1em;
   padding: 8px;
   text-align: center;
+  margin-top: 0;
   margin-right: 0;
   font-weight: 1000;
 }
 #signup label {
+  margin-top: 0;
   font-size: 2em;
   font-weight: bold;
 }
@@ -159,4 +175,59 @@ body {
   font-weight: 600;
   font-size: 1.5em;
   color: rgb(92, 92, 92);
+}
+
+#container {
+  row-gap: 1.5em;
+  width: 100%;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+#container button {
+  border: none;
+  background: none;
+  color: #fafafa;
+  font-family: Poppins, Verdana, Arial, sans-serif;
+  font-size: 3.5rem;
+  cursor: pointer;
+}
+.item {
+  width: auto;
+  height: 100px;
+}
+#preview {
+  height: 100px;
+  border: 1px solid black;
+}
+
+#submitBtn {
+  width: 100%;
+  height: 80px;
+  margin-top: auto;
+  margin-bottom: 0;
+  border-radius: 45px;
+  font-family: Poppins, Verdana, Arial, sans-serif;
+  font-size: 2.5rem;
+  color: #fafafa;
+  cursor: pointer;
+  background: hsl(0, 0%, 40%);
+  border: none;
+  position: relative;
+  top: 80px;
+  transform: translateY(25px)
+}
+#submitBtn:hover{
+  scale: 1.05;
+  transition: .1s ease;
+  font-weight: 800;
+  box-shadow: 0 0 15px grey;
+}
+#submitBtn:active{
+  scale: 1.02;
+  transition: .1s ease;
+  font-weight: 600;
+  box-shadow: 0 0 15px grey;
 }
