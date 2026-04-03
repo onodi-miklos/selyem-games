@@ -1,14 +1,15 @@
-
 {
   "name": "empty",
   "version": "1.0.0",
   "description": "",
   "main": "backend/dist/app.js",
   "scripts": {
+    "watch:backend": "tsc --watch -p backend",
+    "watch:frontend": "tsc --watch -p backend/frontend",
     "build:backend": "tsc -p backend",
     "build:frontend": "tsc -p backend/frontend",
     "build": "npm run build:backend && npm run build:frontend",
-    "start":"npm run build && nodemon backend/dist/app.js"
+    "start": "npm run build && nodemon backend/dist/app.js"
   },
   "keywords": [],
   "author": "",
