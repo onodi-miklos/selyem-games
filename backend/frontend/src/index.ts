@@ -1,6 +1,16 @@
 // dialog
 const dialog = document.getElementById("signup") as HTMLDialogElement | null;
 
+const startBtn: HTMLElement | null = document.getElementById('startBtn') as HTMLButtonElement;
+const closeBtn: HTMLElement | null = document.getElementById('closeBtn') as HTMLButtonElement;
+
+if (startBtn) {
+  startBtn.onclick = start
+}
+if (closeBtn) {
+  closeBtn.onclick = hide
+}
+
 function start(): void {
   if (dialog) {
     dialog.showModal();
@@ -14,6 +24,7 @@ function hide(): void {
 }
 
 // characters
+import {characters} from './characters'
 
 // haj
 const hajPrev: HTMLElement = document.getElementById(
@@ -47,10 +58,19 @@ hajNext.onclick = function (): void {
 };
 function updateHaj(state: number): void {
   if (hajEl) {
-    hajEl.textContent = String(state);
+    switch (state) {
+      case 1:
+        hajEl.innerHTML = characters.normal;
+      case 2:
+        hajEl.innerHTML = characters.lany;
+      case 3:
+        hajEl.innerHTML = characters.tokfilko;
+      case 4:
+        hajEl.innerHTML = characters.bandi;
+    }
   }
-  updatePreview([String(haj), String(arc), String(szin)])
 
+  updatePreview([String(haj), String(arc), String(szin)])
 }
 
 // arc
@@ -85,8 +105,20 @@ arcNext.onclick = function (): void {
 };
 function updateArc(state: number): void {
   if (arcEl) {
-    arcEl.textContent = String(state);
+    switch (state) {
+      case 1:
+        arcEl.innerHTML = characters.mosoly;
+      case 2:
+        arcEl.innerHTML = characters.merges;
+      case 3:
+        arcEl.innerHTML = characters.normalis;
+      case 4:
+        arcEl.innerHTML = characters.kawaii;
+      case 5:
+        arcEl.innerHTML = characters.roblox;
+    }
   }
+
   updatePreview([String(haj), String(arc), String(szin)])
 
 }
@@ -123,7 +155,20 @@ szinNext.onclick = function (): void {
 };
 function updateSzin(state: number): void {
   if (szinEl) {
-    szinEl.textContent = String(state);
+    switch (state) {
+      case 1:
+        szinEl.innerHTML = characters.feher;
+      case 2:
+        szinEl.innerHTML = characters.fekete;
+      case 3:
+        szinEl.innerHTML = characters.kek;
+      case 4:
+        szinEl.innerHTML = characters.piros;
+      case 5:
+        szinEl.innerHTML = characters.sarga;
+      case 6:
+        szinEl.innerHTML = characters.zold;
+    }
   }
   updatePreview([String(haj), String(arc), String(szin)])
 }
@@ -136,7 +181,7 @@ function updatePreview(states: string[]): void {
 
   const content: string = states.join('');
   if (preview) {
-    preview.textContent = content;
+    preview.innerHTML = content;
   }
 
 }

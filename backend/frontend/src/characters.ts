@@ -2530,4 +2530,4 @@ const zold: string = `
 </svg>
 `
 
-export {alap, korona, normal, lany, tokfilko, bandi, mosoly, merges, normalis, kawaii, roblox, feher, fekete, kek, piros, sarga, zold}
+export const characters = {alap, korona, normal, lany, tokfilko, bandi, mosoly, merges, normalis, kawaii, roblox, feher, fekete, kek, piros, sarga, zold}
