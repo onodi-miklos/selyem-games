@@ -24,7 +24,7 @@ const hajNext: HTMLElement = document.getElementById(
 ) as HTMLButtonElement;
 const hajEl: HTMLElement | null = document.getElementById("haj");
 let haj: number = 1;
-const hajLength: number = 5;
+const hajLength: number = 4;
 
 function checkHaj(state: number): number {
   if (state < 1) {
@@ -62,7 +62,7 @@ const arcNext: HTMLElement = document.getElementById(
 ) as HTMLButtonElement;
 const arcEl: HTMLElement | null = document.getElementById("arc");
 let arc: number = 1;
-const arcLength: number = 4;
+const arcLength: number = 5;
 
 function checkArc(state: number): number {
   if (state < 1) {
