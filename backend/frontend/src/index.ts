@@ -280,6 +280,8 @@ updateHaj(1);
 updateArc(1);
 updateSzin(1);
 
+
+// submitBtn
 const submitBtn: HTMLElement = document.getElementById(
   "submitBtn",
 ) as HTMLButtonElement;
