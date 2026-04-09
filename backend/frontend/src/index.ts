@@ -281,7 +281,7 @@ updateArc(1);
 updateSzin(1);
 
 
-// submitBtn
+// submit
 const submitBtn: HTMLElement = document.getElementById(
   "submitBtn",
 ) as HTMLButtonElement;
