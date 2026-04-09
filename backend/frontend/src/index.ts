@@ -1,6 +1,6 @@
 // dialog
-if (localStorage.getItem('user') !== null){
-  window.location.href = './rooms.html';
+if (localStorage.getItem("user") !== null) {
+  window.location.href = "./rooms.html";
 }
 const dialog = document.getElementById("signup") as HTMLElement | null;
 
@@ -280,7 +280,6 @@ updateHaj(1);
 updateArc(1);
 updateSzin(1);
 
-
 // submit
 const submitBtn: HTMLElement = document.getElementById(
   "submitBtn",
@@ -291,23 +290,27 @@ if (submitBtn) {
 }
 
 interface User {
-  nev: string,
-  haj: number,
-  arc: number,
-  szin: number
+  nev: string;
+  haj: number;
+  arc: number;
+  szin: number;
 }
 
 function submit(): void {
-  
-  const nameField = document.getElementById('nameField') as HTMLInputElement;
+  const nameField = document.getElementById("nameField") as HTMLInputElement;
   if (nameField) {
-    const name: string = nameField.value
-    const user: User = {
-      nev: name,
-      haj: haj,
-      arc: arc,
-      szin: szin
+    if (nameField.value === "" || nameField.value === null) {
+      window.alert("Név megadása kötelező!");
+    } else {
+      const name: string = nameField.value;
+      const user: User = {
+        nev: name,
+        haj: haj,
+        arc: arc,
+        szin: szin,
+      };
+      window.location.href = "./rooms.html";
+      localStorage.setItem("user", JSON.stringify(user));
     }
-    localStorage.setItem('user', JSON.stringify(user))
   }
 }

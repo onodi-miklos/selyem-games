@@ -339,6 +339,7 @@ span {
   z-index: 3;
 }
 
+
 #submitBtn {
   box-sizing: border-box;
   width: 100%;
@@ -351,26 +352,30 @@ span {
   font-size: clamp(1rem, 3vw, 2rem);
   color: #fafafa;
   cursor: pointer;
-  background: hsl(0, 0%, 40%);
+  background: hsl(240, 5%, 71%);
   border: none;
   flex-shrink: 0;
   touch-action: manipulation;
-  transform: translateY(-35%)
+  transform: translateY(-15%);
+  box-shadow: -10px -10px 10px hsl(0, 0%, 75%),
+              10px 10px 10px hsl(0, 0%, 50%)
 }
 
 #submitBtn:hover {
-  scale: 1.05;
   transition: 0.1s ease;
   font-weight: 800;
-  box-shadow: 0 0 15px grey;
+  box-shadow: -10px -10px 10px hsl(0, 0%, 50%),
+              10px 10px 10px hsl(0, 0%, 75%)
 }
 
 #submitBtn:active {
   scale: 1.02;
   transition: 0.1s ease;
   font-weight: 600;
-  box-shadow: 0 0 15px grey;
+  box-shadow: -10px -10px 10px hsl(0, 0%, 75%),
+              10px 10px 10px hsl(0, 0%, 50%)
 }
+
 
 @media (min-width: 600px) {
   #haj,
