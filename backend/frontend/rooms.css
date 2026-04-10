@@ -123,7 +123,7 @@ header #you {
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
-  padding: 15px;
+  padding: clamp(12px, 3vw, 15px);
   display: none;
   flex-direction: column;
   background: hsl(240, 5%, 71%);
@@ -131,8 +131,11 @@ header #you {
   color: #fafafa;
   box-shadow: 0 0 35px hsl(240, 3%, 57%);
   overflow: hidden;
-  body {
-    overflow: hidden;
+}
+@media (max-width: 480px) {
+  #createRoom {
+    width: calc(100vw - 1rem);
+    max-height: 90dvh;
   }
 }
 
@@ -178,21 +181,21 @@ header #you {
   flex-shrink: 0;
   touch-action: manipulation;
   box-shadow: -10px -10px 10px hsl(0, 0%, 75%),
-              10px 10px 10px hsl(0, 0%, 50%)
+              10px 10px 10px hsl(0, 0%, 50%);
 }
 
 #submitBtn:hover {
   transition: 0.1s ease;
   font-weight: 800;
-  box-shadow: -10px -10px 10px hsl(0, 0%, 75%),
-              10px 10px 10px hsl(0, 0%, 50%)
+  box-shadow: -10px -10px 10px hsl(0, 0%, 50%),
+              10px 10px 10px hsl(0, 0%, 75%);
 }
 
 #submitBtn:active {
   transition: 0.1s ease;
   font-weight: 600;
   box-shadow: -10px -10px 10px hsl(0, 0%, 75%),
-              10px 10px 10px hsl(0, 0%, 50%)
+              10px 10px 10px hsl(0, 0%, 50%);
 }
 
 @media (min-width: 600px) {
@@ -233,22 +236,63 @@ header #you {
   background: hsla(0, 0%, 100%, 12%);
 }
 
-
 #cover {
-  position: absolute;
-  width: 1100vw;
-  height: 1100vh;
+  position: fixed;
+  inset: 0;
   z-index: 5;
   background: #00000050;
-  top: 0;
-  left: 0;
   display: none;
   backdrop-filter: blur(5px);
 }
 
-
-
 #createRoom h2 {
   margin-top: 0;
   margin-bottom: 25px;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0.25rem 0 0;
+  border: 1px solid grey;
+  border-radius: 15px;
+  min-height: 1.25em;
+  max-height: 1.5em;
+  padding: 0.4em 0.65em 0.4em 0.85em;
+  font-weight: 600;
+  font-size: clamp(0.875rem, 3.5vw, 1.5em);
+  color: rgb(92, 92, 92);
+}
+@media (max-width: 480px) {
+  input[type="text"] {
+    font-size: 1rem;
+  }
+}
+input[type="checkbox"] {
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+#checkboxHolder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+#checkboxHolder label {
+  margin: 0;
+}
+@media (max-width: 480px) {
+  input[type="checkbox"] {
+    height: 1.5em;
+    width: 1.5em;
+  }
+  #checkboxHolder {
+    gap: 0.5rem;
+  }
+}
+label {
+  cursor: pointer;
 }
