@@ -1,0 +1,44 @@
+header #you {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+* {
+  font-family: Poppins, Verdana, Arial, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+button {
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 2.5em;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+button:hover{
+  transition: .1s ease;
+  font-weight: 800;
+}
+button:active {
+  font-weight: 600;
+  transition: .1s ease;
+}
+#leave {
+  color: #fafafa;
+  background: #e07070;
+}
